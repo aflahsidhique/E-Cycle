@@ -22,13 +22,11 @@ app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 
 app.get('/', (req, res) => {
-    res.send('Hello, World!');
+    res.sendFile(path.join(__dirname, "client","build","index.html"));
 });
 
-app.use(express.static(path.join(__dirname, '../client/build')));
-app.get('*',function (req, res) {
-    res.sendFile(path.join(__dirname, '../client/build/index.html'));
-});
+app.use(express.static(path.join(__dirname, "client","build")));
+
 
 
 app.post("/ewaste", async(req, res) =>{
