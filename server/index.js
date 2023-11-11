@@ -6,7 +6,7 @@ const connection = require("./db");
 const userRoutes = require("./routes/users");
 const authRoutes = require("./routes/auth");
 const Ewaste = require('./models/ewaste');
-const path = require('path')
+
 
 
 // database connection
@@ -22,10 +22,9 @@ app.use("/api/users", userRoutes);
 app.use("/api/auth", authRoutes);
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, "client","build","index.html"));
+    res.send("server running");
 });
 
-app.use(express.static(path.join(__dirname, "client","build")));
 
 
 
