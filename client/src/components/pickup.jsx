@@ -32,7 +32,7 @@ const Pickup = () => {
 
         try {
             console.log('Sending:', { name, phone, address,ewastedata });
-            await axios.post("http://localhost:8080/ewaste",{
+            await axios.post("https://ewasteapi.onrender.com/ewaste",{
                 name,
                 phone,
                 address,

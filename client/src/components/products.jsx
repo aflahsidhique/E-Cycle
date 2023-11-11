@@ -11,7 +11,7 @@ function Products() {
     const [products,setProducts] = useState([])
 
     useEffect(() =>{
-        axios.get('http://localhost:8080/products')
+        axios.get('https://ewasteapi.onrender.com/products')
         .then(products => setProducts(products.data))
         .catch(error => console.error(error))
     },[])
