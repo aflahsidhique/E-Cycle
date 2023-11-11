@@ -33,7 +33,6 @@ app.post("/ewaste", async(req, res) =>{
         const {name,phone,address,ewastedata,eimage}= req.body;
         const ewaste = new Ewaste({Name:name,Phone:phone,Address:address,Ewastedata:ewastedata,Image:eimage});
         const savedEwaste = await ewaste.save();
-        res.json(savedEwaste);
         res.send({Status:"OK"});
     }catch(error){
         console.log(error)
