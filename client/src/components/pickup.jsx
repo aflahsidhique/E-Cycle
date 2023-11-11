@@ -100,7 +100,7 @@ const Pickup = () => {
           accept='image/*'
           onChange={convertToBase64}
           />
-          {image==="" || image===null?"": <img className='imgfile'width={100} height={100} src={image} alt=''/>}
+          {image==="" || image===null?"": <img className='imgfile'width={150} height={150} src={image} alt=''/>}
         <div className="button-container">
           <button className="send-button" onClick={handleSend}>
             Place

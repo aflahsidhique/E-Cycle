@@ -35,7 +35,7 @@ function Products() {
                         <div className="col col-2" data-label="Phone">{product.Phone}</div>
                         <div className="col col-3" data-label="Address">{product.Address}</div>
                         <div className="col col-4" data-label="Product">{product.Ewastedata}</div>
-                        <div className="col col-5" data-label="Image"><img width={50} height={50} src={product.Image} alt=''/></div>
+                        <div className="col col-5" data-label="Image"><img width={100} height={100} src={product.Image} alt=''/></div>
                     </li>
                     })
             }
